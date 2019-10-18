@@ -1,0 +1,120 @@
+.section1 {
+  display: flex;
+  margin-top: 8px;
+  // flex-wrap: wrap;
+  .video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie-info {
+    display: flex;
+    /* width: 900px; */
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    .name {
+      width: 100%;
+    padding: 15px;
+    }
+    .title {
+      a {
+        &:hover {
+          text-decoration: none;;
+        }
+      }
+      h5 {
+        color: #e5e5e5;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+    }
+    .genres {
+      display: flex;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      p {
+        color: #e5e5e5;
+        font-size: 0.9rem;
+        border: 2px solid;
+        padding: 4px 24px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+    }
+    .overview {
+      padding: 20px;
+      p {
+        color: #9E9E9E;
+        // margin-top: 26px;
+        line-height: 30px;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+        text-align: justify;
+        margin-bottom: 0px;
+      }
+    }
+    .rating, .releaseDate {
+      padding: 0 15px;
+      p {
+        color: #e5e5e5;
+        font-size: 1rem;
+      }
+    }
+  }
+  .col-md-6 {
+    padding: 0px !important;
+  }
+  iframe {
+    width: 500px;
+    height: 400px;
+  }
+  .col-sm-12 {
+    padding: 0px !important;
+  }
+}
+.section2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .image {
+    margin: 20px;
+  }
+  img {
+    height: 150px !important;
+  }
+}
+
+.header {
+  color: #e5e5e5;
+  margin-bottom: 0px;
+  padding: 10px 21px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+@media (max-width: 560px) {
+  .row {
+    padding: 0px !important;
+  }
+  iframe {
+    width: 435px !important;
+    padding: 10px !important;
+  }
+  .section1 {
+    flex-wrap: wrap !important;
+  }
+}
+@media (max-width: 768px) {
+  .section1 {
+    flex-wrap: wrap !important;
+  }
+}
+@media (max-width: 960px) {
+  iframe {
+    width: 560px !important;
+  }
+}

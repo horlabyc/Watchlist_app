@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <section class="section1">
+      <div class="video-wrapper">
+        <!-- <youtube-player
+          [videoId]="movieData.videoId"
+          (ready)="savePlayer($event)"
+          (change)="onStateChange($event)"
+          [height] = "videoHeight"
+          [width]= "videoWidth"
+          [playerVars]="playerVars">
+        </youtube-player> -->
+        <iframe [src]="movieData.video | safe"></iframe>
+      </div>
+      <div class="movie-info">
+        <div class="name">
+          <div class="title">
+            <a [href]="movieData.homepage" target="_blank"><h5>{{ movieData.title }}</h5></a>
+          </div>
+          <div class="genres">
+            <p *ngFor="let genre of movieData.genres">{{ genre.name }}</p>
+          </div>
+        </div>
+        <div class="other">
+          <div class="overview">
+            <p>{{ movieData.overview }}</p>
+          </div>
+          <div class="rating">
+            <p>Rating: {{ movieData.vote_average}} / 10</p>
+          </div>
+          <div class="releaseDate">
+            <p>Release Date: {{ movieData.release_date }}</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <p class="header">Similar Movies</p>
+  <section class="section2">
+
+    <div class="similarMovies" *ngFor="let movie of similarMovies">
+      <div class="image"  (click) = "getMovieInfo(movie.id)">
+        <img [src] = "movie.poster_path">
+      </div>
+    </div>
+  </section>
+</div>

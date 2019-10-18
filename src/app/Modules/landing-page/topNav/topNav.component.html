@@ -1,0 +1,5 @@
+<div class="navbar py-0">
+  <ul class="menu_items mb-0 pl-0">
+    <li class="menu_item" *ngFor ="let item of navItems" [routerLink]="item.Link" routerLinkActive="router-link-active" >{{ item.Name }}</li>
+  </ul>
+</div>

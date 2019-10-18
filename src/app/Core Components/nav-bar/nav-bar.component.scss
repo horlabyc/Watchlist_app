@@ -1,0 +1,115 @@
+.mainMenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #01051c;
+  .logo {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgba(253, 125, 96, 1);
+    font-weight: bold;
+  }
+  .navLinks {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 20px;
+      padding: 20px;
+      color: white;
+      font-size: 1.1rem;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      &:hover {
+        color: rgba(253, 125, 96, 1);
+      }
+    }
+  }
+  .search {
+    flex-grow: 0.6;
+    display: flex;
+    align-items: center;
+    .fas {
+     color: #ffffff52;
+    }
+    input {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      background: #01051c;
+      border: none;
+      color: white;
+      outline: none;
+    }
+  }
+  .auth {
+    display: flex;
+    a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: white;
+      padding: 0.8rem 0.9rem;
+      font-size: 0.9rem;
+      border-radius: 0.8rem;
+      transition: all 0.4s ease-out 0s;
+      &:hover {
+        background: linear-gradient(to right, rgba(253, 125, 96, 1),rgba(65, 61, 124, 1));
+      }
+    }
+  }
+
+}
+.toggleMenu {
+  display: none;
+  justify-content: space-between;
+  background: #000;
+  align-items: center;
+  .logoToggle {
+    padding: 12px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgba(253, 125, 96, 1);
+    font-weight: bold;
+  }
+  .fas {
+    color: white;
+    padding: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+.mobileMenu {
+  display: none;
+  ul {
+    width: 100%;
+    li {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+.linkActive {
+  color: rgba(253, 125, 96, 1)  !important;
+}
+// Media query
+@media (max-width: 818px) {
+  .mainMenu {
+    display: none;
+  }
+  .toggleMenu {
+    display: flex;
+  }
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background:black;
+    transition: all 0.4s ease 0s;
+    li {
+      list-style: none;
+      color: white;
+      padding: 7px;
+      cursor: pointer;
+    }
+  }
+}
+

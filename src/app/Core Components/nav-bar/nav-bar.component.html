@@ -1,0 +1,27 @@
+<nav class="toggleMenu">
+    <h4 routerLink="" class="logoToggle">Watchlist</h4>
+    <i class="fas fa-bars" (click) = "displayMenu = !displayMenu" *ngIf="!displayMenu"></i>
+    <i class="fas fa-times" (click) = "displayMenu = !displayMenu" *ngIf="displayMenu"></i>
+</nav>
+<nav class="mainMenu">
+    <h4 routerLink="" class="logo">Watchlist</h4>
+    <ul class="navLinks mb-0">
+      <li  [routerLink]="[ '/films/tvshows' ]" routerLinkActive="linkActive" ><i class="fas fa-film" style="padding: 10px; color: rgba(253, 125, 96, 1);"></i>TV Shows</li>
+      <li [routerLink]="[ '/films/movies' ]" routerLinkActive="linkActive" ><i class="fas fa-video" style="padding: 10px; color: rgba(253, 125, 96, 1);"></i>Movies</li>
+    </ul>
+    <div class="search">
+      <i class="fas fa-search"></i>
+      <input type = "text" placeholder="Search for movie, tv show, person">
+    </div>
+    <div class="auth">
+      <a class="login" [routerLink]="[ '/auth/login' ]" routerLinkActive="linkActive" *ngIf="!isLoggedIn">Login</a>
+      <a class="login" *ngIf="isLoggedIn" (click) = "logout()">Logout</a>
+      <a [routerLink]="[ '/auth/signup' ]" routerLinkActive="linkActive" class="signup"  *ngIf="!isLoggedIn">Sign Up</a>
+    </div>
+</nav>
+<nav class="mobileMenu" *ngIf="displayMenu">
+    <li  [routerLink]="[ '/films/tvshows' ]" routerLinkActive="linkActive"><i class="fas fa-film" style="padding: 10px; color: rgba(253, 125, 96, 1);"></i>TV Shows</li>
+    <li [routerLink]="[ '/films/movies' ]" routerLinkActive="linkActive" ><i class="fas fa-video" style="padding: 10px; color: rgba(253, 125, 96, 1);"></i>Movies</li>
+    <li [routerLink]="[ '/auth/login' ]" routerLinkActive="linkActive">Login</li>
+    <li [routerLink]="[ '/auth/signup' ]" routerLinkActive="linkActive">Sign Up</li>
+</nav>

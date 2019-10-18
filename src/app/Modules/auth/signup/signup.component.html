@@ -1,0 +1,20 @@
+<div class="container">
+    <app-notifier  class="notifier"  *ngIf="isNotificationMessage"></app-notifier>
+    <div class="signin">
+      <p id="greet">Welcome to <span>Watchlist!</span></p>
+      <form [formGroup] = "signupForm">
+        <input type="email" placeholder="Email" formControlName="email" />
+        <input type="password" placeholder="Password" formControlName="password"/>
+      </form>
+      <a id ="login" (click) = 'signUp()'>
+        <i class="fas fa-spin fa-spinner" *ngIf="loading"></i>
+        {{ loading ? '' : 'Register'}}
+      </a>
+      <!-- <div class="social-container">
+        <a href="#" class="social" id="facebook" style="border: 2px solid#3b5998;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"  id="google" style="border: 2px solid#DB4437;"><i class="fab fa-google"></i></a>
+        <a href="#" class="social"  id="linkedin" style="border: 2px solid#0e76a8;"><i class="fab fa-linkedin-in"></i></a>
+      </div> -->
+      <p id="noAccount">Already have an account? <span routerLink="/auth/login">Login here</span></p>
+    </div>
+  </div>

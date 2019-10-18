@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+// @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway|Montserrat|PT+Sans+Narrow|Palanquin&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  // font-family: 'Montserrat', sans-serif;
+  // font-family: 'Palanquin', sans-serif;
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.uk-icon {
+  background-color: #9E9E9E !important;
+   border-radius: 15px;
+  cursor: pointer;
+}
