@@ -1,4 +1,5 @@
 <div class="wrapper">
+    <app-top-nav [navItems] = "navItems"></app-top-nav>
     <p class="info">"Today, I consider myself the luckiest man on the face of the earth."</p>
   <app-loader [loading]= 'isPageLoading'></app-loader>
   <div class="image-wrapper" *ngIf="!isPageLoading">

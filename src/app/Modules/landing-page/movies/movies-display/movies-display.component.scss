@@ -15,3 +15,11 @@
 .uk-active {
   padding-left: 20px !important;
 }
+
+@media (max-width: 560px) {
+  .uk-panel {
+    img {
+      height: 245px !important;
+    }
+  }
+}

@@ -22,6 +22,7 @@
 <nav class="mobileMenu" *ngIf="displayMenu">
     <li  [routerLink]="[ '/films/tvshows' ]" routerLinkActive="linkActive"><i class="fas fa-film" style="padding: 10px; color: rgba(253, 125, 96, 1);"></i>TV Shows</li>
     <li [routerLink]="[ '/films/movies' ]" routerLinkActive="linkActive" ><i class="fas fa-video" style="padding: 10px; color: rgba(253, 125, 96, 1);"></i>Movies</li>
-    <li [routerLink]="[ '/auth/login' ]" routerLinkActive="linkActive">Login</li>
-    <li [routerLink]="[ '/auth/signup' ]" routerLinkActive="linkActive">Sign Up</li>
+    <li [routerLink]="[ '/auth/login' ]" routerLinkActive="linkActive" *ngIf="!isLoggedIn">Login</li>
+    <li  *ngIf="isLoggedIn" (click) = "logout()">Logout</li>
+    <li [routerLink]="[ '/auth/signup' ]" routerLinkActive="linkActive"  *ngIf="!isLoggedIn">Sign Up</li>
 </nav>

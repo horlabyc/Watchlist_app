@@ -1,4 +1,5 @@
 <div class="wrapper">
+  <app-top-nav [navItems] = "navItems"></app-top-nav>
   <p class="info">Movies showing in Cinemas from {{showingDateMin}} to {{showingDateMax}}</p>
   <app-loader [loading]= 'isPageLoading'></app-loader>
   <div class="image-wrapper" *ngIf="!isPageLoading">
