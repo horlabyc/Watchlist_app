@@ -3,6 +3,7 @@ import { MoviesService } from 'src/app/Services/Movie/movies.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Movie } from 'src/app/Models/movie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movies-display',
@@ -11,15 +12,10 @@ import { Movie } from 'src/app/Models/movie';
 })
 export class MoviesDisplayComponent implements OnInit {
   @Input() categoryName: string;
-  popularMovies$: Observable<any>;
-  actionAndAdventureMovies$: Observable<any>;
-  familyAndDrama$: Observable<any>;
-  romance$: Observable<any>;
-  crimeAndThriller$: Observable<any>;
   movies$: Observable<any>;
   movies: Movie[] = [];
 
-  constructor(private movieService: MoviesService) { }
+  constructor(private movieService: MoviesService, private route: Router) { }
 
   extractMovies(movies) {
     for (let count = 0; count < 10; count++) {
@@ -38,6 +34,10 @@ export class MoviesDisplayComponent implements OnInit {
     ).subscribe(movies => {
       this.extractMovies(movies);
     });
+  }
+
+  getMovieInfo(movie_id) {
+    this.route.navigate(['/films/movie', movie_id]);
   }
 
   ngOnInit() {

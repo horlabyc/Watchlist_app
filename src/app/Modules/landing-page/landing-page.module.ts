@@ -15,6 +15,7 @@ import { PopularMoviesComponent } from './movies/popular-movies/popular-movies.c
 import { MoviesDisplayComponent } from './movies/movies-display/movies-display.component';
 import { MovieComponent } from './movie/movie.component';
 import { SafePipe } from 'src/app/Utilities/safe.pipe';
+import { TvShowsDisplayComponent } from './tv-shows/tv-shows-display/tv-shows-display.component';
 
 
 
@@ -22,7 +23,7 @@ import { SafePipe } from 'src/app/Utilities/safe.pipe';
   declarations: [LandingPageComponent, TopNavComponent, TvShowsComponent,
     MoviesComponent, TopRatedMoviesComponent, MoviesInTheatreComponent,
     SafePipe,
-    CominSoonMoviesComponent, PopularMoviesComponent, MoviesDisplayComponent, MovieComponent],
+    CominSoonMoviesComponent, PopularMoviesComponent, MoviesDisplayComponent, MovieComponent, TvShowsDisplayComponent],
   imports: [
     CommonModule,
     SharedModule,

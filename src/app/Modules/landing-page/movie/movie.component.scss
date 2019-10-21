@@ -85,13 +85,15 @@
     margin: 20px;
   }
   img {
-    height: 150px !important;
+    height: 260px !important;
   }
 }
 
 .header {
-  color: #e5e5e5;
-  margin-bottom: 0px;
+  color: rgba(253, 125, 96, 1);
+  // margin-bottom: 0px;
+  width: 93%;
+  margin: 0 auto;
   padding: 10px 21px;
   margin-top: 20px;
   font-size: 18px;
@@ -106,6 +108,11 @@
   }
   .section1 {
     flex-wrap: wrap !important;
+  }
+  .image {
+    img {
+      height: 190px !important;
+    }
   }
 }
 @media (max-width: 768px) {
