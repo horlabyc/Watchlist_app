@@ -18,6 +18,7 @@ export class CategorizedTvshowsDisplayComponent implements OnInit, OnDestroy {
   componentIsAlive: boolean;
   @Input() shows;
   @Output() pageNumber: EventEmitter<any> = new EventEmitter();
+  moviesPageNumber = 1;
   constructor() { }
 
   extractData(data: Observable<any>) {
