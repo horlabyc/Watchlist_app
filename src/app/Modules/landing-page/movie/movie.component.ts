@@ -14,6 +14,12 @@ export class MovieComponent implements OnInit, OnDestroy {
   playerVars = {
     cc_lang_pref: 'en'
   };
+  navItems = [
+    {Name: 'Movies in Theatre', Link: '/films/movies/movies-in-theatre' },
+    { Name: 'Comin Soon', Link: '/films/movies/coming-soon'},
+    {Name: 'Popular', Link: '/films/movies/popular'},
+    {Name: 'Top Rated', Link: '/films/movies/top-rated'}
+  ];
   private player;
   private ytEvent;
   // private videoHeight;
@@ -46,13 +52,18 @@ export class MovieComponent implements OnInit, OnDestroy {
     this.player.pauseVideo();
   }
 
+  get backgroundImageUrl() {
+    // tslint:disable-next-line: max-line-length
+    return `linear-gradient(to bottom, rgba(245, 246, 252, 0.26), rgb(0, 0, 0)), url("https://image.tmdb.org/t/p/original${this.movieData.backdrop_path}")`;
+  }
+
   extractMovieData(data: Observable<any>) {
     data.subscribe(response => {
       if (response ) {
-        const { title, homepage, overview, release_date, popularity, vote_average, adult, tagline, genres } = response;
+        const { title, homepage, overview, release_date, popularity, vote_average, adult, tagline, genres, backdrop_path } = response;
         this.movieData = {
         title, homepage, overview, release_date, popularity, vote_average, adult, tagline,
-        genres,  video: `https://www.youtube.com/embed/${response.videos.results[0].key}`
+        genres,  backdrop_path, video: `https://www.youtube.com/embed/${response.videos.results[0].key}`
       };
       }
     });

@@ -1,0 +1,116 @@
+.wrapper {
+  .info {
+    color: #e5e5e5;
+    text-align: center;
+    padding: 50px;
+    background: #795548;
+    font-family: 'Raleway', sans-serif;
+  }
+  .image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    img {
+      height: auto;
+    }
+    .movie-title {
+      color: #e5e5e5;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    .mdi {
+      color: #e5e5e5;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    .uk-panel {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+  .paginate {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    a {
+      text-decoration: none;
+      margin: 6px 1px;
+      display: inline-block;
+      width: 60px;
+      background: #607D8B;
+      line-height: 45px;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+      position: relative;
+      &:hover {
+        color: #e74c36;
+      }
+    }
+    .active {
+      color: #FF9800 !important;
+    }
+    .prev {
+      border-radius: 30px 0 0 30px;
+    }
+    .next {
+      border-radius: 0 30px 30px 0;
+    }
+  }
+  // .paginate a::before, .paginate a::after {
+  //   content: "";
+  //   position: absolute;
+  //   border-top: 23px solid transparent;
+  //   border-bottom: 23px solid transparent;
+  // }
+  // .num::before, .next::before {
+  //   border-right: 20px solid #607D8B;
+  //   right: 100%;
+  // }
+  // .num::after, .prev::after {
+  //   border-right: 20px solid #f1f1f1;
+  //   right: 0;
+  // }
+}
+@media (max-width: 560px) {
+  .image-wrapper {
+    justify-content: space-between;
+  }
+  .image {
+    img {
+      height: 150px !important;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .image-wrapper {
+    justify-content: space-between;
+  }
+  .image {
+    img {
+      height: 140px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .image-wrapper {
+    justify-content: space-between !important;
+  }
+  .image {
+    img {
+      // height: 220px !important;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .image-wrapper {
+    justify-content: space-evenly !important;
+  }
+  .image {
+    img {
+      height: auto !important;
+    }
+  }
+}

@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TvShowsComponent implements OnInit {
   navItems = [
-    {Name: 'TV Airing Today', Link: '' }, { Name: 'On Air', Link: ''}, {Name: 'Popular', Link: ''}, {Name: 'Top Rated', Link: ''}
+    {Name: 'TV Airing Today', Link: '/films/tvshows/airing-today' },
+    { Name: 'On Air', Link: '/films/tvshows/on-air'},
+    {Name: 'Popular', Link: '/films/tvshows/popular'},
+    {Name: 'Top Rated', Link: '/films/tvshows/top-rated'}
   ];
   category1 = 'Action and Adventure';
   category2 = 'Animation';

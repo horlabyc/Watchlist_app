@@ -1,6 +1,7 @@
 .section1 {
   display: flex;
   margin-top: 8px;
+  padding: 30px;
   // flex-wrap: wrap;
   .video-wrapper {
     width: 100%;
@@ -14,6 +15,7 @@
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
+    padding: 30px;
     .name {
       width: 100%;
     padding: 15px;
@@ -26,7 +28,8 @@
       }
       h5 {
         color: #e5e5e5;
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
         font-family: 'Josefin Sans', sans-serif;
       }
     }
@@ -38,7 +41,7 @@
       flex-wrap: wrap;
       margin-top: 20px;
       p {
-        color: #e5e5e5;
+        color: #fff;
         font-size: 0.9rem;
         border: 2px solid;
         padding: 4px 24px;
@@ -49,7 +52,7 @@
     .overview {
       padding: 20px;
       p {
-        color: #9E9E9E;
+        color: #fff;
         // margin-top: 26px;
         line-height: 30px;
         font-size: 0.9rem;
@@ -102,6 +105,9 @@
   .row {
     padding: 0px !important;
   }
+  .overview, .name, .movie-info {
+    padding: 0 !important;
+  }
   iframe {
     width: 435px !important;
     padding: 10px !important;
@@ -118,6 +124,9 @@
 @media (max-width: 768px) {
   .section1 {
     flex-wrap: wrap !important;
+  }
+  .overview, .name, .movie-info {
+    padding: 0 !important;
   }
 }
 @media (max-width: 960px) {

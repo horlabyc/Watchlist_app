@@ -8,6 +8,8 @@
           <li *ngFor="let movie of movies">
             <div class="uk-panel" (click) = "getMovieInfo(movie.id)">
               <img [src] = "movie.poster_path" alt="posterImage">
+              <!-- <p class="movie-title">{{movie.title}}</p> -->
+              <i class="mdi mdi-clock-outline" data-toggle="tooltip" data-placement="right" title="Release date"> {{movie.release_date}}</i>
             </div>
           </li>
         </ul>

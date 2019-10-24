@@ -3,6 +3,22 @@
   img {
     height: 350px;
   }
+  .uk-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .show-title {
+    color: #e5e5e5;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .mdi {
+    color: #e5e5e5;
+    font-family: 'Josefin Sans', sans-serif;
+  }
 }
 .categoryName {
   padding: 0 2rem;

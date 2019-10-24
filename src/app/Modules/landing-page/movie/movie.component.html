@@ -1,4 +1,5 @@
-<div class="wrapper">
+<div class="wrapper"  [ngStyle]= "{'background-image': backgroundImageUrl}">
+  <app-top-nav [navItems] = "navItems"></app-top-nav>
   <section class="section1">
       <div class="video-wrapper">
         <!-- <youtube-player

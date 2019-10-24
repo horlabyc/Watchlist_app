@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <app-top-nav [navItems] = "navItems"></app-top-nav>
+    <p class="info">"Today, I consider myself the luckiest man on the face of the earth."</p>
+  <app-loader [loading]= 'isPageLoading'></app-loader>
+  <div class="image-wrapper" *ngIf="!isPageLoading">
+    <div class="image" *ngFor="let movie of movies" >
+        <div class="uk-panel" style="padding: 0.5rem 0.5rem 0.5rem 0.5rem" (click) = "getMovieInfo(movie.id)">
+            <img [src] = "movie.poster_path" alt="posterImage">
+            <!-- <p class="movie-title">{{movie.title}}</p> -->
+            <i class="mdi mdi-clock-outline" data-toggle="tooltip" data-placement="right" title="First air date"> {{movie.release_date}}</i>
+          </div>
+    </div>
+  </div>
+  <div class="paginate">
+    <a  class="prev" (click) = "setNextMoviesPageNum('prev')" ><i class="fas fa-angle-left"></i></a>
+    <a  class="num" [ngClass]="{'active': moviesPageNumber === 1}" (click) = "setNextMoviesPageNum(1)">1</a>
+    <a  class="num" [ngClass]="{'active': moviesPageNumber === 2}"  (click) = "setNextMoviesPageNum(2)">2</a>
+    <a  class="num" [ngClass]="{'active': moviesPageNumber === 3}"  (click) = "setNextMoviesPageNum(3)">3</a>
+    <a  class="num" [ngClass]="{'active': moviesPageNumber === 4}" (click) = "setNextMoviesPageNum(4)">4</a>
+    <a  class="num" [ngClass]="{'active': moviesPageNumber === 5}" (click) = "setNextMoviesPageNum(5)">5</a>
+    <a  class="next" (click) = "setNextMoviesPageNum('next')"><i class="fas fa-angle-right"></i></a>
+  </div>
+</div>

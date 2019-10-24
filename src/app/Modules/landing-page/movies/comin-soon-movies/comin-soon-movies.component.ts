@@ -21,7 +21,7 @@ export class CominSoonMoviesComponent implements OnInit, OnDestroy {
     {Name: 'Popular', Link: '/films/movies/popular'},
     {Name: 'Top Rated', Link: '/films/movies/top-rated'}
   ];
-  constructor(  private movieService: MoviesService, private route: Router ) {
+  constructor( private movieService: MoviesService, private route: Router ) {
     this.componentIsAlive = true;
    }
 

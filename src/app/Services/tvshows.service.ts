@@ -19,7 +19,7 @@ export class TvshowsService {
   // tslint:disable-next-line: no-unused-expression
   public sci_fiAndFantasy$;
   public warAndPolitics$;
-  public categorizedMovies$;
+  public categorizedShows$;
 
   constructor(private http: HttpClient) { }
 
@@ -107,5 +107,17 @@ export class TvshowsService {
 
   extractWarAndPoliticsShowsData(): Observable<any> {
     return this.warAndPolitics$ = this.getWarAndPoliticsShows();
+  }
+
+  getShowsByCategory(tvshowsCategory: string, pageNumber: number) {
+    // tslint:disable-next-line: max-line-length
+    const path = this.base_url + 'tv/' + tvshowsCategory + '?api_key=d5274e9bbcb0aaaaa9589e2e54dce867&language=en-US&page=' + pageNumber;
+    return this.http.get<Response>(path).pipe(
+      retry(3), shareReplay(1)
+    );
+  }
+
+  extractCategorizedShowsData(tvshowsCategory: string, pageNumber: number): Observable<any> {
+    return this.categorizedShows$ = this.getShowsByCategory(tvshowsCategory, pageNumber);
   }
 }

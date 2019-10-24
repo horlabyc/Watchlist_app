@@ -14,6 +14,12 @@ export class MoviesComponent implements OnInit {
   category5 = 'Family and Drama';
   category6 = 'Romance';
   category7 = 'Science Fiction and Horror';
+  navItems = [
+    {Name: 'Movies in Theatre', Link: '/films/movies/movies-in-theatre' },
+    { Name: 'Comin Soon', Link: '/films/movies/coming-soon'},
+    {Name: 'Popular', Link: '/films/movies/popular'},
+    {Name: 'Top Rated', Link: '/films/movies/top-rated'}
+  ];
   constructor() {
 
   }

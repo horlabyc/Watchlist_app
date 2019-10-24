@@ -8,6 +8,8 @@
           <li *ngFor="let tvShow of tvShows">
             <div class="uk-panel">
               <img [src] = "tvShow.poster_path" alt="posterImage">
+              <!-- <p class="show-title">{{tvShow.name}}</p> -->
+              <i class="mdi mdi-clock-outline" data-toggle="tooltip" data-placement="right" title="First air date"> {{tvShow.first_air_date}}</i>
             </div>
           </li>
         </ul>
